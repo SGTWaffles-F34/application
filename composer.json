@@ -1,0 +1,12 @@
+{
+  "name": "gsherman/328/application",
+  "authors": [
+    {
+      "name": "Gavin Sherman",
+      "email": "gavinmsherman@gmail.com"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree-core": "dev-master"
+  }
+}
