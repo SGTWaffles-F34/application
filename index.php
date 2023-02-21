@@ -6,16 +6,18 @@ error_reporting(E_ALL);
 //Require the necessary files
 require_once('vendor/autoload.php');
 
-//Start a session
-session_start();
-
 //Create an instance of the Base class
 $f3 = Base::instance();
 
 //create an instance of the controller class
-$con = new Controller($f3);//hand it to our controller class to create an instance
+//$con = new Controller($f3);//hand it to our controller class to create an instance
 
 //Define a default route
-$f3->route('GET /', function() {
-    $GLOBALS['con']->home(); //$GLOBALS gives access to global variables inside a php method
+$f3->route('GET /', function (){
+    //Instantiate a view
+    $view = new Template();
+    echo $view->render("views/home.html");
 });
+
+//run fat-free
+$f3->run();
