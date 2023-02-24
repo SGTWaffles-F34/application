@@ -1,11 +1,23 @@
-
-
 html, body {
     font-family: Verdana, Geneva, sans-serif;
-    background: dimgrey;
+}
+
+body{
+    background: white;
 }
 
 h1, h2, h3, h4, h5, p, li, label, hr{
-    color: white;
+
 }
+
+.center{
+    display: block;
+    margin-left: 43%;
+    margin-right: 50%;
+}
+
+.ml-indent{
+    margin-left: 40px;
+}
+
 
