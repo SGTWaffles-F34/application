@@ -10,6 +10,11 @@ h1, h2, h3, h4, h5, p, li, label, hr{
 
 }
 
+a{
+    color: black !important;
+    text-decoration: none !important;
+}
+
 .center{
     display: block;
     margin-left: 43%;

@@ -13,7 +13,7 @@ $f3 = Base::instance();
 //$con = new Controller($f3);//hand it to our controller class to create an instance
 
 //Define a default route
-$f3->route('GET /', function (){
+$f3->route('GET /home', function (){
     //Instantiate a view
     $view = new Template();
     echo $view->render("views/home.html");
@@ -25,6 +25,28 @@ $f3->route('GET /personinfo', function() {
     $view = new Template();
     echo $view->render("views/personinfo.html");
 });
+
+//previous experience route
+$f3->route('GET /experience', function() {
+    //Instantiate a view
+    $view = new Template();
+    echo $view->render("views/experience.html");
+});
+
+//Job Openings and Mailing List route
+$f3->route('GET /jobsandmailing', function() {
+    //Instantiate a view
+    $view = new Template();
+    echo $view->render("views/jobsandmailing.html");
+});
+
+//Summary page route
+$f3->route('GET /summary', function() {
+    //Instantiate a view
+    $view = new Template();
+    echo $view->render("views/summary.html");
+});
+
 
 //run fat-free
 $f3->run();
