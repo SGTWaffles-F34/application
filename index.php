@@ -13,6 +13,13 @@ $f3 = Base::instance();
 //$con = new Controller($f3);//hand it to our controller class to create an instance
 
 //Define a default route
+$f3->route('GET /', function (){
+    //Instantiate a view
+    $view = new Template();
+    echo $view->render("views/home.html");
+});
+
+//Define a home route
 $f3->route('GET /home', function (){
     //Instantiate a view
     $view = new Template();
