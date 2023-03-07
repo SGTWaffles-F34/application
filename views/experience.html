@@ -2,9 +2,51 @@
 
 <body>
 
+<div class="container">
+
 <h1>EXPERIENCE</h1>
 
-<a href="jobsandmailing"><button class="btn btn-primary center text-nowrap rounded">Next ></button></a>
+    <form action="jobsandmailing" method="post" class="form-horizontal">
 
+        <div class="row">
+
+            <div class="col" >
+                    <label for="bio" class="control-label">Biography</label>
+                    <input class="form-control" type="text" style="height: 245px"
+                           name="bio" id="bio">
+            </div>
+
+            <div class="col">
+                <label for="ghub" class="control-label">Github Link</label>
+                <input class="form-control" type="text"
+                       name="ghub" id="ghub">
+                <br>
+
+                <label>Years Experience</label> <br>
+                <input type="radio" id="zerotwo" name="yrexp" value="0-2">
+                <label for="zerotwo">0-2</label>
+                <input type="radio" id="twofour" name="yrexp" value="2-4">
+                <label for="twofour">2-4</label>
+                <input type="radio" id="fourp" name="yrexp" value="4+">
+                <label for="fourp">4+</label>
+                <br> <br>
+
+                <label>Willing To Relocate</label> <br>
+                <input type="radio" id="yes" name="relocate" value="Yes">
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="relocate" value="No">
+                <label for="no">No</label>
+                <input type="radio" id="maybe" name="relocate" value="Maybe">
+                <label for="maybe">Maybe</label>
+                <br> <br>
+
+                <a href="jobsandmailing"><button class="btn btn-primary col-12 rounded">Next ></button></a>
+
+            </div>
+        </div>
+    </form>
+
+
+</div>
 </body>
 </html>
