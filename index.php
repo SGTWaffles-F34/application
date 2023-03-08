@@ -16,6 +16,14 @@ $f3 = Base::instance();
 //$con = new Controller($f3);//hand it to our controller class to create an instance
 
 //Define a default route
+$f3->route('GET /', function (){
+    //Instantiate a view
+    $view = new Template();
+    echo $view->render("views/home.html");
+});
+
+
+//Define a home route
 $f3->route('GET /home', function (){
     //Instantiate a view
     $view = new Template();
@@ -48,7 +56,7 @@ $f3->route('GET|POST /experience', function($f3) {
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $_SESSION['bio'] = $_POST['bio'];
-        $_SESSION['lname'] = $_POST['ghub'];
+        $_SESSION['ghub'] = $_POST['ghub'];
         $_SESSION['yrexp'] = $_POST['yrexp'];
         $_SESSION['relocate'] = $_POST['relocate'];
 
@@ -63,21 +71,6 @@ $f3->route('GET|POST /experience', function($f3) {
 
 //Job Openings and Mailing List route
 $f3->route('GET|POST /jobsandmailing', function($f3) {
-
-//    $_SESSION['bio'] = $_POST['bio'];
-//    $_SESSION['lname'] = $_POST['ghub'];
-//    $_SESSION['yrexp'] = $_POST['yrexp'];
-//    $_SESSION['relocate'] = $_POST['relocate'];
-//    $_SESSION['bio'] = $_POST['bio'];
-//    $_SESSION['lname'] = $_POST['ghub'];
-//    $_SESSION['yrexp'] = $_POST['yrexp'];
-//    $_SESSION['relocate'] = $_POST['relocate'];
-//    $_SESSION['bio'] = $_POST['bio'];
-//    $_SESSION['lname'] = $_POST['ghub'];
-//    $_SESSION['yrexp'] = $_POST['yrexp'];
-//    $_SESSION['relocate'] = $_POST['relocate'];
-//    $_SESSION['bio'] = $_POST['bio'];
-//    $_SESSION['lname'] = $_POST['ghub'];
 
 
     //Instantiate a view
