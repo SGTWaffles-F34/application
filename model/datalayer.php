@@ -96,7 +96,7 @@ class DataLayer{
         echo 'getting applicants...';
 
         //1. Define the query
-        $sql = "SELECT * FROM 'applicant'";
+        $sql = "SELECT * FROM applicant";
 
         //2. Prepare the statement
         $statement = $this->_dbh->prepare($sql);

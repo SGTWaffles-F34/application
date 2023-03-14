@@ -69,6 +69,7 @@ $f3->route('GET|POST /summary', function() {
 });
 
 $f3->route('GET /admin', function(){
+
    $GLOBALS['con']->admin();
 });
 
