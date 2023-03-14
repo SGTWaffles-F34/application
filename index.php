@@ -5,13 +5,12 @@ error_reporting(E_ALL);
 
 //Require the necessary files
 require_once('vendor/autoload.php');
-require_once('model/validate.php');
+//require_once('model/validate.php');
 
 $validator = new Validate();
 
-
 //OB-Start to get around header already sent error
-ob_start();
+//ob_start();
 
 //Start a session
 session_start();
@@ -68,14 +67,14 @@ $f3->route('GET|POST /summary', function() {
     $GLOBALS['con']->summary();
 });
 
-$f3->route('GET /admin', function(){
+$f3->route('GET /administration', function(){
 
-   $GLOBALS['con']->admin();
+   $GLOBALS['con']->administration();
 });
 
 //run fat-free
 $f3->run();
 
 //
-ob_flush();
+//ob_flush();
 

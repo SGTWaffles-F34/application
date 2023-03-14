@@ -93,7 +93,6 @@ class DataLayer{
     }
 
     function getApplicants(){
-        echo 'getting applicants...';
 
         //1. Define the query
         $sql = "SELECT * FROM applicant";

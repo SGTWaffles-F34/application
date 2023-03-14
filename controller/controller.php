@@ -180,12 +180,13 @@ class Controller{
         session_destroy();
     }
 
-    function admin(){
+    function administration()
+    {
         //Get the data from the model
         $applicants = $GLOBALS['dataLayer']->getApplicants();
         $this->_f3->set('applicants', $applicants);
 
         $view = new Template();
-        echo $view->render('views/admin.html');
+        echo $view->render('views/administration.html');
     }
 }
