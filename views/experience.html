@@ -21,15 +21,22 @@
                 <label for="ghub" class="control-label">Github Link</label>
                 <input class="form-control" type="text"
                        name="ghub" id="ghub">
+                <check if="{{ isset(@errors['ghub'])}}">
+                    <span class="err">{{ @errors['ghub'] }}</span>
+                </check>
                 <br>
 
                 <label>Years Experience</label> <br>
-                <input type="radio" id="zerotwo" name="yrexp" value="0-2 years">
-                <label for="zerotwo">0-2</label>
-                <input type="radio" id="twofour" name="yrexp" value="2-4 years">
-                <label for="twofour">2-4</label>
-                <input type="radio" id="fourp" name="yrexp" value="4+ years">
-                <label for="fourp">4+</label>
+                <repeat group="{{ @experience }}" value="{{ @experience }}">
+                    <input type="radio" id="exp" name="yrexp" value="{{ @experience }}">
+                    <label for="exp">{{ @experience }}</label>
+                </repeat>
+
+                <check if="{{ isset(@errors['yrexp'])}}">
+                    <br>
+                    <span class="err">{{ @errors['yrexp'] }}</span>
+                </check>
+
                 <br> <br>
 
                 <label>Willing To Relocate</label> <br>

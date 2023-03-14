@@ -1,0 +1,22 @@
+<include href="views/header.html"></include>
+
+<body>
+
+<div class="container">
+
+    <h1>Administration</h1>
+
+    <repeat group="{{ @applicants }}" values="{{ @applicant }}">
+
+        <p>ApplicantID: {{ @applicant['applicant_id'] }}<br>
+            Name: {{ @applicant['fname'] }} {{ @applicant['lname'] }}<br>
+
+        </p>
+
+    </repeat>
+
+
+
+</div>
+</body>
+</html>

@@ -7,16 +7,23 @@
 
 
     <h1></h1>
-    <p>Name: {{ @SESSION.fname }} {{ @SESSION.lname }}</p>
-    <p>Email: {{ @SESSION.email }}</p>
-    <p>State: {{ @SESSION.state }}</p>
-    <p>Phone: {{ @SESSION.phone }}</p>
-    <p>Github Link: {{ @SESSION.ghub }}</p>
-    <p>Experience: {{ @SESSION.yrexp }}</p>
-    <p>Willing to Relocate: {{ @SESSION.relocate }}</p>
-    <p>Biography: {{ @SESSION.bio }}</p>
-    <p>Development Jobs: {{ @SESSION.devJobs}}</p>
-    <p>Industry Verticals: {{ @SESSION.indVerts}}</p>
+    <p>Name: {{ @SESSION.newApplication->getFname() }} {{ @SESSION.newApplication->getLname() }}</p>
+    <p>Email: {{ @SESSION.newApplication->getEmail() }}</p>
+    <p>State: {{ @SESSION.newApplication->getState() }}</p>
+    <p>Phone: {{ @SESSION.newApplication->getPhone() }}</p>
+    <p>Github Link: {{ @SESSION.newApplication->getGhub() }}</p>
+    <p>Experience: {{ @SESSION.newApplication->getExp() }}</p>
+    <p>Willing to Relocate: {{ @SESSION.newApplication->getRelocate() }}</p>
+    <p>Biography: {{ @SESSION.newApplication->getBio() }}</p>
+
+    <check if="{{ property_exists($SESSION['newApplication'], '_selectionJobs') }}">
+        <p>Mailing Lists:
+            {{ @SESSION.newApplication->getSelectionJobs() }},
+            {{ @SESSION.newApplication->getSelectionVerticals() }}
+        </p>
+    </check>
+<!--    <p>Development Jobs: {{ @SESSION.devJobs}}</p>-->
+<!--    <p>Industry Verticals: {{ @SESSION.indVerts}}</p>-->
 <br><br>
 
     <button>SUBMIT MY APPLICATION</button>

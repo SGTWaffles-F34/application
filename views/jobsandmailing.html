@@ -19,6 +19,12 @@
                             <repeat group="{{ @devJobs }}" value="{{ @devJob }}">
                                 <label><input type="checkbox" name="dev[]" value="{{ @devJob }}"> {{ @devJob }}</label>
                             </repeat>
+
+                            <check if="{{ isset(@errors['dev'])}}">
+                                <br>
+                                <span class="err">{{ @errors['dev'] }}</span>
+                            </check>
+
                         </div>
                     </div>
 
@@ -39,6 +45,11 @@
                             <repeat group="{{ @indVerts }}" value="{{ @indVert }}">
                                 <label><input type="checkbox" name="indV[]" value="{{ @indVert }}"> {{ @indVert }}</label>
                             </repeat>
+
+                            <check if="{{ isset(@errors['indV'])}}">
+                                <br>
+                                <span class="err">{{ @errors['indV'] }}</span>
+                            </check>
                         </div>
                     </div>
 
